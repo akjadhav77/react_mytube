@@ -1,8 +1,29 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+import { Box, Stack, Typography } from '@mui/material';
+import { Sidebar, Videos } from "../components";
+
 
 const Feed = () => {
   return (
-    <div>Feed</div>
+    <Stack sx={{ flexDirection: { sx: "column", md: "row", backgroundColor: '#5c5c5c' } }}>
+      <Box sx={{ height: { sx: 'auto', md: '92vh' }, borderRight: '1px solid #3d3d3d', px: {    sx: 0, md: 2 }}}>
+        <Sidebar/>
+        <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: 'whitesmoke' }}>
+          CopyRight 2022
+        </Typography>
+
+      </Box>
+
+      <Box p={1} sx={{ overflowY: 'auto', height: '90vh', flex: '2' }}>
+        <Typography variant="h4" mb={2} sx={{ color: 'white' }}> 
+          New <span style={{ color: '#FC1503' }}>videos</span>
+        </Typography>
+
+        <Videos videos={[]}/>
+
+      </Box>
+
+    </Stack>
   )
 }
 

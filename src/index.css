@@ -28,6 +28,7 @@ a {
 .category-btn:hover {
   background-color: #FC1503 !important;
   color: white !important;
+  border-radius: 10px !important;
 }
 
 .category-btn:hover span{
@@ -50,16 +51,17 @@ a {
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  justify-content: start;
+  border-radius: 10px !important;
+  justify-content: start!important;
   cursor:pointer;
   background: transparent;
   outline: none;
   border: none;
+  color: whitesmoke;
 
-  padding: 7px 15px;
-  margin: 10px 0px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  padding: 5px 10px !important;
+  margin: 5px 0px !important;
+  transition: all 0.3s ease !important;
 }
 
 @media screen and (max-width: 900px) {
