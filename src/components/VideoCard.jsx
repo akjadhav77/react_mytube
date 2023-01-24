@@ -6,17 +6,17 @@ import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoCha
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
     // console.log(video);
   return (
-    <Card sx={{ width: { md: '320px', xs: '100%' }, boxShadow: 'none', borderRadius: 0, width: '250px'}} > {/* css for card properties */}
+    <Card className="small-device" sx={{ width: { md: '320px', xs: '100%' }, boxShadow: 'none', borderRadius: 0, width: '215px'}} > {/* css for card properties */}
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
             <CardMedia image={snippet?.thumbnails?.high?.url}
             alt={snippet?.title}
-            sx={{ width: 270, height: 150 }}
+            sx={{ width: 260, height: 140 }}
             />
         </Link>
-        <CardContent sx={{ backgroundColor: '#1e1e1e', height: '55px'}} >
+        <CardContent sx={{ backgroundColor: '#1e1e1e', height: '45px'}} >
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} >
-                <Typography variant='subtitle1' color='#FFF' fontSize='15px' marginTop='-5px'> {/*css for title*/}
-                    {snippet?.title.slice(0, 50) || demoVideoTitle.slice(0, 50)}
+                <Typography variant='subtitle2' color='#FFF' fontSize='12px' marginTop='-8px'> {/*css for title*/}
+                    {snippet?.title.slice(0, 50) || demoVideoTitle.slice(0, 50)}...
                 </Typography>
             </Link>
             <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} >
